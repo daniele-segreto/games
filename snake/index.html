@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Nokia 3310 Snake - Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Menu Iniziale -->
+        <div id="menu">
+            <h1>SNAKE 3310</h1>
+            <input type="text" id="playerName" placeholder="Tuo Nome..." maxlength="10">
+            <button onclick="startGame()">START</button>
+            <button onclick="showRecords()">RECORD</button>
+            <button onclick="showLeaderboard()">CLASSIFICHE</button>
+        </div>
+
+        <!-- Schermata Classifica -->
+        <div id="leaderboard" class="hidden">
+            <h2>TOP 5</h2>
+            <ul id="leaderboardList"></ul>
+            <button onclick="backToMenu()">INDIETRO</button>
+        </div>
+
+        <!-- Area di Gioco -->
+        <div id="game-screen" class="hidden">
+            <div class="stats">
+                <div>Record: <span id="highScore">0</span></div>
+                <div>Punti: <span id="scoreVal">0</span></div>
+            </div>
+            <canvas id="snakeGame" width="300" height="300"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
