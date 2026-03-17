@@ -54,8 +54,14 @@ function saveScore(name, finalScore) {
     localStorage.setItem("snakeLeaderboard", JSON.stringify(leaderboard));
 
     // Aggiorna il record assoluto se superato
-    let globalRecord = localStorage.getItem("snakeRecord") || 0;
-    if (finalScore > globalRecord) localStorage.setItem("snakeRecord", finalScore);
+    let globalRecord = parseInt(localStorage.getItem("snakeRecord")) || 0;
+    if (finalScore > globalRecord) {
+        localStorage.setItem("snakeRecord", finalScore);
+        highEl.innerHTML = finalScore; // aggiorna l'interfaccia subito
+    } else {
+        // se non superato, mantieni il valore visualizzato attuale (o dagli storage)
+        highEl.innerHTML = globalRecord;
+    }
 }
 
 // Mostra la lista dei migliori punteggi nel menu
@@ -75,6 +81,12 @@ function showLeaderboard() {
 function backToMenu() {
     document.getElementById("leaderboard").classList.add("hidden");
     document.getElementById("menu").classList.remove("hidden");
+}
+
+// Mostra il record assoluto attuale via menu (pulsante RECORD)
+function showRecords() {
+    const globalRecord = parseInt(localStorage.getItem("snakeRecord")) || 0;
+    alert("Record attuale: " + globalRecord);
 }
 
 /* --- Input Utente --- */
