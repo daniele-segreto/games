@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita lo scroll durante il gioco */
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Permette di cliccare attraverso la UI sul gioco */
+    z-index: 10;
+}

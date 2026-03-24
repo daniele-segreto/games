@@ -1,0 +1,41 @@
+==========================================================
+       DR. GEM ENGINE - SCHEDA TECNICA DEI COMANDI
+==========================================================
+Lead Developer: Prof. Daniele Segreto
+Module: Dual-Input Control System (Hybrid Mouse & Keyboard)
+Version: 1.2 (3D Forest Environment)
+
+----------------------------------------------------------
+1. MOVIMENTO (TASTIERA)
+----------------------------------------------------------
+W / Freccia Su      : Spostamento in Avanti
+S / Freccia Giù     : Spostamento all'Indietro
+A / Freccia Sinistra : Spostamento a Sinistra
+D / Freccia Destra   : Spostamento a Destra
+
+----------------------------------------------------------
+2. MODIFICATORI E AZIONI FISICHE
+----------------------------------------------------------
+Shift Sinistro      : Scatto (Velocità incrementata a 0.40)
+Spazio              : Salto (Attivabile solo se a contatto con il suolo)
+Ctrl Sinistro / C   : Accovacciarsi (Modifica scala del modello e velocità)
+Escape              : Sospensione del motore (Pausa)
+
+----------------------------------------------------------
+3. SISTEMA DI COMBATTIMENTO E MIRA (IBRIDO)
+----------------------------------------------------------
+Tasto Q             : Attiva modalità Mira (Zoom Camera)
+Tasto R             : Scarica Shock Elettrico (Thunder Shock)
+Mouse Sinistro      : Scarica Shock Elettrico (Alternativo a R)
+Mouse Destro        : Mantieni per Mira / Zoom (Alternativo a Q)
+
+----------------------------------------------------------
+4. NOTE TECNICHE SUI LIMITI AMBIENTALI
+----------------------------------------------------------
+Il sistema implementa un blocco fisico circolare:
+- Raggio Area Gioco : 30 unità
+- Limite Collisione : 28.5 unità (Recinto)
+Oltre tale raggio, la posizione del giocatore viene 
+automaticamente normalizzata per impedire l'uscita dalla
+piattaforma principale verde.
+==========================================================
